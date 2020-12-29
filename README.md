@@ -1,17 +1,17 @@
-# Tiny JS
+# Cantil JS
 
 A tiny framework with the helpers you need to boost your productivity.
 
 ### Install
 
 ```js
-npm i tiny-js
+npm i cantil
 ```
 
 ### Usage
 
 ```js
-require('tiny-js');
+require('cantil');
 ```
 
 ### Methods
@@ -36,7 +36,7 @@ p.queryAll('a'); // or queryAll('p:first-child a');
 
 #### NodeList / HTMLCollection Array Prototype
 _By default NodeList and HTMLCollection don't have Array metods like `map`, `filter` or `reduce` (among others)._  
-_Tiny JS enables these methods 🎉_
+_Cantil JS enables these methods 🎉_
 
 ```js
 queryAll('p')
@@ -73,7 +73,7 @@ p.siblings('h1');
 _Promise for DOM ready_
 
 ```js
-import { onDomReady } from 'tiny-js';
+import { onDomReady } from 'cantil';
 
 init: () => {
   console.log("App ready");
@@ -88,7 +88,7 @@ onDomReady().then(init);
 _Clones a DOM template making it ready to use_
 
 ```js
-import { template } from 'tiny-js';
+import { template } from 'cantil';
 
 let element = template('template#example');
 
@@ -101,7 +101,7 @@ query('section').append(element);
 _Makes sure the callable runs only once_
 
 ```js
-import { once } from 'tiny-js';
+import { once } from 'cantil';
 
 let callOnce = once(() => {
   console.log('callOnce');

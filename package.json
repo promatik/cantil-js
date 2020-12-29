@@ -1,8 +1,8 @@
 {
-  "name": "tiny-js",
+  "name": "cantil",
   "version": "0.0.1",
-  "description": "A tiny framework with the helpers you need to boost your productivity.",
-  "main": "src/tiny.js",
+  "description": "Cantil JS is a tiny framework with the helpers you need to boost your productivity.",
+  "main": "src/cantil.js",
   "dependencies": {
     "eslint": "^7.16.0",
     "webpack": "^5.11.0",
@@ -14,18 +14,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/promatik/tiny-js.git"
+    "url": "git+https://github.com/promatik/cantil-js.git"
   },
   "keywords": [
-    "tiny",
+    "cantil",
     "js",
-    "tiny-js",
+    "cantil-js",
     "javascript"
   ],
   "author": "promatik",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/promatik/tiny-js/issues"
+    "url": "https://github.com/promatik/cantil-js/issues"
   },
-  "homepage": "https://github.com/promatik/tiny-js#readme"
+  "homepage": "https://github.com/promatik/cantil-js#readme"
 }
