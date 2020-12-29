@@ -1,3 +1,11 @@
+<p align="center"><a href="https://vuejs.org" target="_blank" rel="noopener noreferrer"><img width="100" src="https://raw.githubusercontent.com/promatik/cantil-js/master/docs/logo.png" alt="Vue logo"></a></p>
+
+<p align="center">
+  <a href="https://npmcharts.com/compare/cantil?minimal=true"><img src="https://img.shields.io/npm/dm/cantil.svg?sanitize=true" alt="Downloads"></a>
+  <a href="https://www.npmjs.com/package/cantil"><img src="https://img.shields.io/npm/v/cantil.svg?sanitize=true" alt="Version"></a>
+  <a href="https://www.npmjs.com/package/cantil"><img src="https://img.shields.io/npm/l/cantil.svg?sanitize=true" alt="License"></a>
+</p>
+
 # Cantil JS
 
 A tiny framework with the helpers you need to boost your productivity.
