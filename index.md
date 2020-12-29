@@ -1,37 +1,122 @@
-## Welcome to GitHub Pages
+<p align="center">
+  <a href="https://npmcharts.com/compare/cantil?minimal=true"><img src="https://img.shields.io/npm/dm/cantil.svg?sanitize=true" alt="Downloads"></a>
+  <a href="https://www.npmjs.com/package/cantil"><img src="https://img.shields.io/npm/v/cantil.svg?sanitize=true" alt="Version"></a>
+  <a href="https://www.npmjs.com/package/cantil"><img src="https://img.shields.io/npm/l/cantil.svg?sanitize=true" alt="License"></a>
+</p>
 
-You can use the [editor on GitHub](https://github.com/promatik/cantil-js/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+### Install
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```js
+npm i cantil
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Usage
 
-### Jekyll Themes
+```js
+require('cantil');
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/promatik/cantil-js/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Methods
 
-### Support or Contact
+---
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+#### `query` / `queryAll`
+_Shortcut for `document.querySelector` and `document.querySelectorAll`_
+
+```js
+// query the first <p> element
+let p = query('p');
+
+// query all <p> elements
+queryAll('p');
+
+// query all <a> inside p
+p.queryAll('a'); // or queryAll('p:first-child a');
+```
+
+---
+
+#### NodeList / HTMLCollection Array Prototype
+_By default NodeList and HTMLCollection don't have Array metods like `map`, `filter` or `reduce` (among others)._  
+_Cantil JS enables these methods 🎉_
+
+```js
+queryAll('p')
+  .filter(p => p.classList.contains('active'))
+  .map(p => p.innerText)
+  .join(', ');
+```
+
+---
+
+#### `index`
+_Position of the element relative to its siblings_
+
+```js
+p.index();
+```
+
+---
+
+#### `sibling` / `siblings`
+_Sibling elements of the element_
+
+```js
+// query the first <h1> sibling of <p>
+p.sibling('h1');
+
+// query all <h1> siblings of <p>
+p.siblings('h1');
+```
+
+---
+
+### `onDomReady`
+_Promise for DOM ready_
+
+```js
+import { onDomReady } from 'cantil';
+
+init: () => {
+  console.log("App ready");
+};
+
+onDomReady().then(init);
+```
+
+---
+
+### `template`
+_Clones a DOM template making it ready to use_
+
+```js
+import { template } from 'cantil';
+
+let element = template('template#example');
+
+query('section').append(element);
+```
+
+---
+
+### `once`
+_Makes sure the callable runs only once_
+
+```js
+import { once } from 'cantil';
+
+let callOnce = once(() => {
+  console.log('callOnce');
+});
+ 
+callOnce();
+callOnce();
+callOnce();
+```
+
+
+## License
+
+Copyright © 2020 António Almeida (promatik) and contributors
+
+Licensed under the MIT license, see [LICENSE.md](LICENSE.md) for details.
