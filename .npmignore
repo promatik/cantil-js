@@ -1,0 +1,6 @@
+/node_modules/
+/.cache
+/docs
+.editorconfig
+.eslintrc.json
+webpack.config.js

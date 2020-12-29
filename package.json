@@ -1,6 +1,6 @@
 {
   "name": "cantil",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Cantil JS is a tiny framework with the helpers you need to boost your productivity.",
   "main": "src/cantil.js",
   "dependencies": {
