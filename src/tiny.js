@@ -35,7 +35,7 @@ export function template(selector) {
 }
 
 // @stimulus https://github.com/stimulusjs/stimulus/blob/master/packages/%40stimulus/core/src/application.ts
-export function domReady() {
+export function onDomReady() {
   return new Promise(resolve => (document.readyState === 'loading'
     ? document.addEventListener('DOMContentLoaded', resolve)
     : resolve()));
