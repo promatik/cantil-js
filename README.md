@@ -3,6 +3,8 @@
 <p align="center">
   <a href="https://www.npmjs.com/package/cantil"><img src="https://img.shields.io/bundlephobia/min/cantil" alt="Size"></a>
   <a href="https://www.npmjs.com/package/cantil"><img src="https://img.shields.io/bundlephobia/minzip/cantil" alt="Size"></a>
+  <a href="https://www.npmjs.com/package/cantil"><img src="https://img.shields.io/npm/dt/cantil" alt="Downloads"></a>
+  <br />
   <a href="https://www.npmjs.com/package/cantil"><img src="https://img.shields.io/npm/v/cantil.svg?sanitize=true" alt="Version"></a>
   <a href="https://www.npmjs.com/package/cantil"><img src="https://img.shields.io/npm/l/cantil.svg?sanitize=true" alt="License"></a>
 </p>
