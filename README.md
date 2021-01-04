@@ -1,7 +1,10 @@
-<p align="center"><a href="https://promatik.github.io/cantil-js/" target="_blank" rel="noopener noreferrer"><img width="100" src="https://raw.githubusercontent.com/promatik/cantil-js/gh-pages/docs/logo.png" alt="Cantil JS logo"></a></p>
+<p align="center"><a href="https://promatik.github.io/cantil-js/" target="_blank" rel="noopener noreferrer"><img width="100" src="https://raw.githubusercontent.com/promatik/cantil-js/master/docs/logo.png" alt="Cantil JS logo"></a></p>
 
 <p align="center">
-  <a href="https://npmcharts.com/compare/cantil?minimal=true"><img src="https://img.shields.io/npm/dm/cantil.svg?sanitize=true" alt="Downloads"></a>
+  <a href="https://www.npmjs.com/package/cantil"><img src="https://img.shields.io/bundlephobia/min/cantil" alt="Size"></a>
+  <a href="https://www.npmjs.com/package/cantil"><img src="https://img.shields.io/bundlephobia/minzip/cantil" alt="Size"></a>
+  <a href="https://www.npmjs.com/package/cantil"><img src="https://img.shields.io/npm/dt/cantil" alt="Downloads"></a>
+  <br />
   <a href="https://www.npmjs.com/package/cantil"><img src="https://img.shields.io/npm/v/cantil.svg?sanitize=true" alt="Version"></a>
   <a href="https://www.npmjs.com/package/cantil"><img src="https://img.shields.io/npm/l/cantil.svg?sanitize=true" alt="License"></a>
 </p>
@@ -56,7 +59,7 @@ queryAll('p')
 ---
 
 #### `index`
-_Position of the element relative to its siblings_
+_Position of the element relative to its parent_
 
 ```js
 p.index();
@@ -65,7 +68,7 @@ p.index();
 ---
 
 #### `sibling` / `siblings`
-_Sibling elements of the element_
+_Query the siblings of the element_
 
 ```js
 // query the first <h1> sibling of <p>
@@ -106,7 +109,7 @@ query('section').append(element);
 ---
 
 ### `once`
-_Makes sure the callable runs only once_
+_Ensures the callable runs only once_
 
 ```js
 import { once } from 'cantil';
