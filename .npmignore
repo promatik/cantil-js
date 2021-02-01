@@ -4,3 +4,4 @@
 .editorconfig
 .eslintrc.json
 webpack.config.js
+*.code-workspace

@@ -29,6 +29,11 @@ Node.prototype.index = function index() {
   return i;
 };
 
+// Trigger events
+Node.prototype.trigger = function trigger(event, init) {
+  this.dispatchEvent(new CustomEvent(event, init));
+};
+
 // Template helper
 export function template(selector) {
   return query(selector).content.cloneNode(true);
