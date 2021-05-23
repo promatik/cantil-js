@@ -3,16 +3,15 @@ Object.setPrototypeOf(NodeList.prototype, Array.prototype);
 Object.setPrototypeOf(HTMLCollection.prototype, Array.prototype);
 
 // Query
-window.query = document.querySelector.bind(document);
-window.queryAll = document.querySelectorAll.bind(document);
+const query = document.querySelector.bind(document);
+const queryAll = document.querySelectorAll.bind(document);
+window.query = query;
+window.queryAll = queryAll;
+
 Node.prototype.query = function query(selector) { return this.querySelector(selector); };
 Node.prototype.queryAll = function queryAll(selector) { return this.querySelectorAll(selector); };
 NodeList.prototype.query = function query(selector) { return this.queryAll(selector)[0]; };
-NodeList.prototype.queryAll = function queryAll(selector) {
-  const results = [];
-  this.map(elem => results.push(...elem.queryAll(selector)));
-  return results;
-};
+NodeList.prototype.queryAll = function queryAll(selector) { return this.map(elem => Array.from(elem.queryAll(selector))).flat(); };
 
 // Sibling util
 Node.prototype.sibling = function sibling(query) { return this.siblings(query)[0]; };
@@ -34,6 +33,7 @@ Node.prototype.trigger = function trigger(event, init) {
   this.dispatchEvent(new CustomEvent(event, init));
 };
 
+export { query, queryAll }
 export { onDomReady, once, template } from './utils/utils';
-export * as swipeable from './utils/swipeable';
-export * as observable from './utils/intersection-observer';
+export { observable } from './utils/intersection-observer';
+export { swipeable } from './utils/swipeable';
