@@ -4,11 +4,10 @@
   "description": "Cantil JS is a tiny framework with the helpers you need to boost your productivity.",
   "main": "src/cantil.js",
   "dependencies": {
-    "eslint": "^7.19.0",
+    "eslint": "^8.0.1",
     "webpack": "^5.53.0",
     "webpack-cli": "^4.8.0"
   },
-  "devDependencies": {},
   "scripts": {
     "build": "npx webpack --config webpack.config.js"
   },
