@@ -5,7 +5,7 @@
   "main": "src/cantil.js",
   "dependencies": {
     "eslint": "^8.0.1",
-    "webpack": "^5.53.0",
+    "webpack": "^5.76.0",
     "webpack-cli": "^5.0.1"
   },
   "scripts": {
