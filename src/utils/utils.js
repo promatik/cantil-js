@@ -15,7 +15,7 @@ export function template(selector) {
 // @vuejs https://github.com/vuejs/vue/blob/4de4649d9637262a9b007720b59f80ac72a5620c/src/shared/util.js
 export function once(callback, ...args) {
   let called = false;
-  
+
   return function () {
     if (!called) {
       called = true;
