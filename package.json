@@ -6,7 +6,7 @@
   "dependencies": {
     "@eslint/js": "^9.3.0",
     "eslint": "^9.3.0",
-    "webpack": "^5.76.0",
+    "webpack": "^5.94.0",
     "webpack-cli": "^5.0.1"
   },
   "scripts": {
