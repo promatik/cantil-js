@@ -3,7 +3,7 @@
   "version": "1.1.5",
   "description": "Cantil JS is a tiny framework with the helpers you need to boost your productivity.",
   "main": "src/cantil.js",
-  "dependencies": {
+  "devDependencies": {
     "@eslint/js": "^9.17.0",
     "eslint": "^9.17.0",
     "webpack": "^5.97.1",
