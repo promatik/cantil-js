@@ -11,7 +11,7 @@ window.queryAll = queryAll;
 Node.prototype.query = function query(selector) { return this.querySelector(selector); };
 Node.prototype.queryAll = function queryAll(selector) { return this.querySelectorAll(selector); };
 NodeList.prototype.query = function query(selector) { return this.queryAll(selector)[0]; };
-NodeList.prototype.queryAll = function queryAll(selector) { return this.map(elem => Array.from(elem.queryAll(selector))).flat(); };
+NodeList.prototype.queryAll = function queryAll(selector) { return this.flatMap(elem => Array.from(elem.queryAll(selector))); };
 
 // Sibling util
 Node.prototype.sibling = function sibling(query) { return this.siblings(query)[0]; };

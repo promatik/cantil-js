@@ -6,7 +6,7 @@ export const swipeable = {
   init: selector => {
     swipeable.elements = queryAll(selector || '[swipeable]');
 
-    swipeable.elements.forEach(swipeable => {
+    for (const swipeable of swipeable.elements) {
       const threshold = Number(swipeable.getAttribute('threshold')) || 120;
       let startTouch;
 
@@ -33,7 +33,7 @@ export const swipeable = {
           }));
         }
       }, { passive: true });
-    });
+    }
   },
 
   // Get Elements
